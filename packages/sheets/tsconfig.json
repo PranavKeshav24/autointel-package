@@ -2,11 +2,11 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "outDir": "./dist",
-    "rootDir": "./src",
-    "baseUrl": ".",
+    "rootDir": "../../",
+    "baseUrl": "../../",
     "paths": {
-      "@auto-intel/core": ["../core/src"],
-      "@auto-intel/csv": ["../csv/src"]
+      "@auto-intel/core": ["packages/core/src"],
+      "@auto-intel/csv": ["packages/csv/src"]
     }
   },
   "include": ["src/**/*"],

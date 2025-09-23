@@ -4,11 +4,11 @@
     "target": "ES2020", // Compile to a modern but widely compatible JavaScript version
     "module": "CommonJS", // Use the standard module system for Node.js
     "outDir": "./dist", // Where to output compiled JavaScript files
-    "rootDir": "./src", // Where your source TypeScript files are located
+    "rootDir": ".", // Allow importing workspace packages in root src
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "@auto-intel/*": ["packages/*/dist"]
+      "@auto-intel/*": ["packages/*/src", "packages/*/dist"]
     },
 
     /* Type-Checking Options */
@@ -23,6 +23,6 @@
     "declaration": true, // Generate corresponding '.d.ts' files for type definitions
     "sourceMap": true // Generate source maps for easier debugging
   },
-  "include": ["src/**/*"], // Specifies which files TypeScript should compile
+  "include": ["src/**/*", "packages/*/src/**/*"], // Compile root and package sources for type resolution
   "exclude": ["node_modules", "dist"] // Specifies files to exclude from compilation
 }
