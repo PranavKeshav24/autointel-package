@@ -1,5 +1,10 @@
-import { helloCore } from "@auto-intel/core";
+import { DataSet } from "@auto-intel/core";
 
-export function parsePdf(): string {
-  return `pdf uses core: ${helloCore()}`;
+export interface PdfToolConfig {}
+
+export async function loadPdf(
+  _pathOrBuffer: unknown,
+  _config?: PdfToolConfig
+): Promise<DataSet> {
+  throw new Error("PDF tool not implemented: abstract stub");
 }

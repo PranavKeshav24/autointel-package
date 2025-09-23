@@ -5,12 +5,19 @@
     "module": "CommonJS", // Use the standard module system for Node.js
     "outDir": "./dist", // Where to output compiled JavaScript files
     "rootDir": "./src", // Where your source TypeScript files are located
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@auto-intel/*": ["packages/*/dist"]
+    },
 
     /* Type-Checking Options */
     "strict": true, // Enable all strict type-checking options
     "esModuleInterop": true, // Allows default imports from CommonJS modules
     "skipLibCheck": true, // Skip type checking of declaration files from dependencies
     "forceConsistentCasingInFileNames": true,
+    "lib": ["ES2020", "DOM"],
+    "types": ["node"],
 
     /* Emitter Options */
     "declaration": true, // Generate corresponding '.d.ts' files for type definitions

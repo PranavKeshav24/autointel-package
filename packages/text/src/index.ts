@@ -1,5 +1,5 @@
-import { helloCore } from "@auto-intel/core";
+import { DataSet } from "@auto-intel/core";
 
-export function analyzeText(): string {
-  return `text uses core: ${helloCore()}`;
+export async function loadText(_input: string | Buffer): Promise<DataSet> {
+  throw new Error("Text tool not implemented: abstract stub");
 }

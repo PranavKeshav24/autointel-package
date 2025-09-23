@@ -1,5 +1,11 @@
-import { helloCore } from "@auto-intel/core";
+import { DataSet } from "@auto-intel/core";
 
-export function connectSqlite(): string {
-  return `sqllite uses core: ${helloCore()}`;
+export interface SqliteQueryOptions {}
+
+export async function querySqlite(
+  _db: unknown,
+  _sql: string,
+  _options?: SqliteQueryOptions
+): Promise<DataSet> {
+  throw new Error("SQLite tool not implemented: abstract stub");
 }
