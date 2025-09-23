@@ -1,0 +1,11 @@
+{
+  "name": "@auto-intel/core",
+  "version": "1.0.0",
+  "description": "Core utilities and types for Auto Intel packages",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  }
+}
