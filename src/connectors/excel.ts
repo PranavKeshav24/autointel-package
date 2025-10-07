@@ -2,7 +2,6 @@ import * as XLSX from "xlsx";
 import { DataSet, RecordData } from "../../packages/core/src/types";
 import { normalizeRows, inferSchema } from "../../packages/core/src/preprocess";
 
-// excel from .xlsx upload
 export async function loadExcelFromBlob(
   blob: Blob,
   options?: { sheet?: string | number; name?: string }

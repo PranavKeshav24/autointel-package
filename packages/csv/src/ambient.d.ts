@@ -1,4 +1,4 @@
-declare module "@autointel/core" {
+declare module "@auto-intel/core" {
   export * from "../../core/src/types";
   export * from "../../core/src/preprocess";
   export * from "../../core/src/visualize";

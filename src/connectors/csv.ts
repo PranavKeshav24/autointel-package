@@ -15,7 +15,6 @@ function toRows(csvText: string): RecordData[] {
   return parsed.data as unknown[] as RecordData[];
 }
 
-// CSV from string
 export function loadCsvFromString(csvText: string, name?: string): DataSet {
   const rawRows = toRows(csvText);
   const rows = normalizeRows(rawRows);
@@ -23,7 +22,6 @@ export function loadCsvFromString(csvText: string, name?: string): DataSet {
   return { schema, rows, source: { kind: "csv", name } };
 }
 
-// CSV from .csv upload
 export async function loadCsvFromBlob(
   blob: Blob,
   name?: string
