@@ -1,12 +1,13 @@
-# AutoIntel Monorepo
+# AutoIntel Package
 
 AI-powered data analysis and reporting across multiple data sources (CSV, Excel, Google Sheets, and more).
 
-## Packages
+## Structure
 
-- `@auto-intel/core`: types, preprocessing, visualization, agent, OpenRouter client
+- `src/core`: types, preprocessing, visualization, agent, OpenRouter client
 - `src/connectors`: frontend-ready connectors (CSV/Excel/Sheets)
-- Others (pdf, postgres, sqlite, text, mongodb): abstract stubs
+- `src/reporting`: reporting helpers
+- `src/stubs`: temporary stubs (pdf, postgres, sqlite, text, mongodb)
 
 ## Prerequisites
 
@@ -16,26 +17,13 @@ AI-powered data analysis and reporting across multiple data sources (CSV, Excel,
 ## Setup
 
 ```bash
-# install dependencies (workspace-aware)
 npm install
-
-# build all packages
 npm run build
 ```
 
 ## Development
 
-- Build a single package:
-
-```bash
-npm run build --workspace @auto-intel/core
-```
-
-- Watch-mode (example using ts-node-dev or nodemon - add as needed):
-
-```bash
-# not configured by default; install if desired
-```
+- Dev script runs `src/index.ts` with nodemon. Adjust as needed.
 
 ## Testing
 
@@ -45,7 +33,7 @@ npm test
 
 ## Environment (OpenRouter)
 
-Set `OPENROUTER_API_KEY` in your environment for the agent to call OpenRouter.
+Set `OPENROUTER_API_KEY` to enable agent calls to OpenRouter.
 
 Windows PowerShell:
 
@@ -65,23 +53,18 @@ Optional:
 - `OPENROUTER_TITLE`
 - `OPENROUTER_MODEL`
 
-## Using Locally in a Frontend App
+## Frontend Usage
 
-- Publish or link this package into your frontend.
-- Ensure peer deps in your app: `papaparse`, `xlsx`, and a Vega-Lite renderer (e.g., `vega-embed`).
-- See `FRONTEND_USAGE.md` for detailed integration examples (CSV/Excel/Sheets and Vega-Lite rendering).
+- Install `autointel-package` plus `papaparse`, `xlsx`, and a Vega-Lite renderer (e.g., `vega-embed`).
+- See `FRONTEND_USAGE.md` for examples.
 
-## Frontend API Surface
+## API Surface
 
-- Connectors: `src/connectors/{csv,excel,sheets}.ts`
-  - CSV: `loadCsvFromBlob(file)`, `loadCsvFromString(text)`
-  - Excel: `loadExcelFromBlob(file, { sheet?, name? })`
-  - Sheets: `csvExportUrlFromIds(sheetId, gid)`, `loadGoogleSheetCsvByUrl(url)`
-- Core agent: `Core.runAgent(dataset, userQuery, aiConfig, tools?, { includeCharts?, excludeCharts?, title? })`
-- Visualizations: `Core.suggestVisualizations(dataset)` → Vega-Lite specs
-- Reporting: `src/reporting` → `buildMarkdownReport`
+- Connectors: `CSV`, `Excel`, `Sheets`
+- Core: `Core.runAgent`, preprocessing, visualization
+- Reporting: `Reporting.buildMarkdownReport`, `Reporting.suggestVisualizations`
 
 ## Release
 
 - Ensure `npm run build` passes
-- Publish from the monorepo root or per-package as needed
+- Publish from root as a single package: `npm publish`

@@ -2,12 +2,12 @@
 
 ## Install
 
-Use your package manager to install this monorepo output (after you publish or use a local link).
+Install the published `autointel-package` from npm (or your registry).
 
 Install peer/host dependencies in your app (renderer and parsers):
 
 ```bash
-npm i papaparse xlsx vega-embed
+npm i autointel-package papaparse xlsx vega-embed
 ```
 
 ## Configure OpenRouter
@@ -116,7 +116,8 @@ const result = await Core.runAgent(dataset, question, aiConfig, [], {
 
 ## Types
 
-Useful types are re-exported from package root: `DataSet`, `VisualizationSpec`, `AnalysisResult`.
+Useful types are re-exported from the root: `DataSet`, `VisualizationSpec`, `AnalysisResult`.
+> Note: PDF, Postgres, SQLite, Text, MongoDB are currently stubbed and return empty datasets. APIs are present for future compatibility.
 
 ## Optional: Proxy calls via Next.js API Route (recommended)
 

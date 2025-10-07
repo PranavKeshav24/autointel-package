@@ -1,4 +1,4 @@
-import { DataSet } from "../../packages/core/src/types";
+import { DataSet } from "../core/types";
 import { loadCsvFromString } from "./csv";
 
 export async function loadGoogleSheetCsvByUrl(

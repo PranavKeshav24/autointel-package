@@ -1,28 +1,20 @@
 {
   "compilerOptions": {
-    /* Build Options */
-    "target": "ES2020", // Compile to a modern but widely compatible JavaScript version
-    "module": "CommonJS", // Use the standard module system for Node.js
-    "outDir": "./dist", // Where to output compiled JavaScript files
-    "rootDir": ".", // Allow importing workspace packages in root src
+    "target": "ES2020",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "moduleResolution": "node",
-    "baseUrl": ".",
-    "paths": {
-      "@auto-intel/*": ["packages/*/src", "packages/*/dist"]
-    },
-
-    /* Type-Checking Options */
-    "strict": true, // Enable all strict type-checking options
-    "esModuleInterop": true, // Allows default imports from CommonJS modules
-    "skipLibCheck": true, // Skip type checking of declaration files from dependencies
+    "baseUrl": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "lib": ["ES2020", "DOM"],
     "types": ["node"],
-
-    /* Emitter Options */
-    "declaration": true, // Generate corresponding '.d.ts' files for type definitions
-    "sourceMap": true // Generate source maps for easier debugging
+    "declaration": true,
+    "sourceMap": true
   },
-  "include": ["src/**/*", "packages/*/src/**/*"], // Compile root and package sources for type resolution
-  "exclude": ["node_modules", "dist"] // Specifies files to exclude from compilation
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "packages"]
 }

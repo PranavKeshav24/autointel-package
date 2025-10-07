@@ -1,6 +1,6 @@
 import * as XLSX from "xlsx";
-import { DataSet, RecordData } from "../../packages/core/src/types";
-import { normalizeRows, inferSchema } from "../../packages/core/src/preprocess";
+import { DataSet, RecordData } from "../core/types";
+import { normalizeRows, inferSchema } from "../core/preprocess";
 
 export async function loadExcelFromBlob(
   blob: Blob,

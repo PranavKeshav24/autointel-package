@@ -1,12 +1,12 @@
-export * as Core from "@auto-intel/core";
+export * as Core from "./core";
 export * as CSV from "./connectors/csv";
 export * as Excel from "./connectors/excel";
 export * as Sheets from "./connectors/sheets";
-export * as PDF from "@auto-intel/pdf";
-export * as Postgres from "@auto-intel/postgres";
-export * as SQLite from "@auto-intel/sqllite";
-export * as Text from "@auto-intel/text";
-export * as MongoDB from "@auto-intel/mongodb";
+export * as PDF from "./stubs/pdf";
+export * as Postgres from "./stubs/postgres";
+export * as SQLite from "./stubs/sqlite";
+export * as Text from "./stubs/text";
+export * as MongoDB from "./stubs/mongodb";
 export * as Reporting from "./reporting";
 
 export function createAIConfigFromEnv() {
@@ -25,4 +25,4 @@ export type {
   VisualizationSpec,
   AnalysisResult,
   OpenRouterConfig,
-} from "../packages/core/src/types";
+} from "./core/types";

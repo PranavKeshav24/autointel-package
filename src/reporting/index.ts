@@ -1,2 +1,3 @@
-export { buildMarkdownReport } from "../../packages/core/src/report";
-export type { VisualizationSpec, DataSet } from "../../packages/core/src/types";
+export { buildMarkdownReport } from "../core/report";
+export type { VisualizationSpec, DataSet } from "../core/types";
+export { suggestVisualizations, selectVisualizations } from "../core/visualize";
