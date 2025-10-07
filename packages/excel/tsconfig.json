@@ -5,7 +5,7 @@
     "rootDir": "../../",
     "baseUrl": "../../",
     "paths": {
-      "@auto-intel/core": ["packages/core/src"]
+      "@autointel/core": ["packages/core/src"]
     }
   },
   "include": ["src/**/*"],

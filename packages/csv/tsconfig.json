@@ -5,8 +5,8 @@
     "rootDir": "../../",
     "baseUrl": "../../",
     "paths": {
-      "@auto-intel/core": ["packages/core/src"],
-      "@auto-intel/csv": ["packages/csv/src"]
+      "@autointel/core": ["packages/core/src"],
+      "@autointel/csv": ["packages/csv/src"]
     }
   },
   "include": ["src/**/*"],

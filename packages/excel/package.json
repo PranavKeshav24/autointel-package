@@ -1,6 +1,6 @@
 {
-  "name": "@auto-intel/excel",
-  "version": "1.0.0",
+  "name": "@autointel/excel",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -8,10 +8,13 @@
     "test": "jest"
   },
   "dependencies": {
-    "@auto-intel/core": "1.0.0",
+    "@autointel/core": "1.0.1",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@types/node": "^20.14.10"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

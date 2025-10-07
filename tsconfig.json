@@ -8,7 +8,7 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "@auto-intel/*": ["packages/*/src", "packages/*/dist"]
+      "@autointel/*": ["packages/*/src", "packages/*/dist"]
     },
 
     /* Type-Checking Options */

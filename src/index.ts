@@ -1,12 +1,13 @@
-export * as Core from "@auto-intel/core";
+export * from "@autointel/core";
+export * as Core from "@autointel/core";
 export * as CSV from "./connectors/csv";
 export * as Excel from "./connectors/excel";
 export * as Sheets from "./connectors/sheets";
-export * as PDF from "@auto-intel/pdf";
-export * as Postgres from "@auto-intel/postgres";
-export * as SQLite from "@auto-intel/sqllite";
-export * as Text from "@auto-intel/text";
-export * as MongoDB from "@auto-intel/mongodb";
+export * as PDF from "@autointel/pdf";
+export * as Postgres from "@autointel/postgres";
+export * as SQLite from "@autointel/sqllite";
+export * as Text from "@autointel/text";
+export * as MongoDB from "@autointel/mongodb";
 export * as Reporting from "./reporting";
 
 export function createAIConfigFromEnv() {

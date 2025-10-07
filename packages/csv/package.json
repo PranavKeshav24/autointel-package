@@ -1,6 +1,6 @@
 {
-  "name": "@auto-intel/csv",
-  "version": "1.0.0",
+  "name": "@autointel/csv",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -8,11 +8,12 @@
     "test": "jest"
   },
   "dependencies": {
-    "@auto-intel/core": "1.0.0",
+    "@autointel/core": "1.0.1",
     "papaparse": "^5.4.1"
   },
   "devDependencies": {
     "@types/node": "^20.14.10",
     "@types/papaparse": "^5.3.14"
-  }
+  },
+  "publishConfig": { "access": "public" }
 }

@@ -1,5 +1,5 @@
-import { DataSet } from "@auto-intel/core";
-import { loadCsvFromString } from "@auto-intel/csv";
+import { DataSet } from "../../core/src/types";
+import { loadCsvFromString } from "@autointel/csv";
 
 // Expects a public Google Sheets CSV export URL or constructs one from id + gid
 export async function loadGoogleSheetCsvByUrl(
